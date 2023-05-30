@@ -1,8 +1,8 @@
-import AvatarImageProps from "@/Interfaces/AvatarImageProps";
 import AvatarImage from "./avatarImage";
+import AvatarComponentProps from "@/Interfaces/AvatarComponentProps";
 
 
-export default function AvatarComponent({ src, alt, status }: AvatarImageProps){
+export default function AvatarComponent({ src, alt, status }: AvatarComponentProps){
 
     const returnClasses = ():string => {
         let classes: string
@@ -22,7 +22,7 @@ export default function AvatarComponent({ src, alt, status }: AvatarImageProps){
     return(
         <div className={returnClasses()}>
             <div className="relative">
-                <AvatarImage src={src} alt={alt} status={status}/>
+                <AvatarImage src={src} alt={alt}/>
             </div>            
         </div>
     )
