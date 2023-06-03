@@ -1,6 +1,8 @@
-export default interface ButtonProps {
+
+export default interface ButtonProps{
     is_icon: boolean,
-    Icon: React.ReactNode,
+    Icon?: React.ElementType,
     ButtonText: string,
-    onValueChange: ()=>string
+    status?: "Loading" | "Error" | "Primary",
+    onClick: () => void
 }
