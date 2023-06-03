@@ -2,10 +2,7 @@ import InputProps from "@/Interfaces/InputProps"
 
 
 
-const InputComponent: React.FC<InputProps> = ({ Placeholder, is_icon, Icon, status, onChange }) => {
-    // An onChange function will be passed through props
-    // The on Value Change, The value will be returned
-    // The specific Icon will be passed through props
+const InputComponent: React.FC<InputProps> = ({ Placeholder, is_icon, Icon, status, value, onChange }) => {
 
     const returnClasses = ():string => {
         let classes: string =  "bg-gray-100 flex justify-around px-4 py-2 rounded-md"
@@ -29,7 +26,7 @@ const InputComponent: React.FC<InputProps> = ({ Placeholder, is_icon, Icon, stat
 
     return(
         <div className={returnClasses()}>
-            <input type="text" name="" id="" placeholder={Placeholder} className="outline-none bg-inherit flex-1 text-sm" onChange={(e) => onChange(e)}/>
+            <input type="text" placeholder={Placeholder} className="outline-none bg-inherit flex-1 text-sm" onChange={(e) => onChange(e)} value={value}/>
             {
                 is_icon && 
                 <p className=" bg-gray cursor-pointer px-2 h-full flex justify-center items-center flex-col">
