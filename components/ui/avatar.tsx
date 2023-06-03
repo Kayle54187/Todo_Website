@@ -2,7 +2,7 @@ import AvatarImage from "./avatarImage";
 import AvatarComponentProps from "@/Interfaces/AvatarComponentProps";
 
 
-export default function AvatarComponent({ src, alt, status }: AvatarComponentProps){
+const AvatarComponent: React.FC<AvatarComponentProps> = ({ src, alt, status }) => {
 
     const returnClasses = ():string => {
         let classes: string
@@ -27,3 +27,5 @@ export default function AvatarComponent({ src, alt, status }: AvatarComponentPro
         </div>
     )
 }
+
+export default AvatarComponent
